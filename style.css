@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #000;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #d3d3d3;
+}
+
+.intro-content {
+    max-width: 50%;
+}
+
+.intro-content h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: #000;
+    padding-bottom: 5px;
+}
+
+.social-links a img {
+    width: 50px;
+    margin-right: 10px;
+    padding-bottom: 10px;
+}
+
+.about-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #333;
+    color: red;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+.profile-pic img {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.projects {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+.projects h2 {
+    font-size: 300%;
+    margin-bottom: 30px;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    height: 500px
+}
+
+.project-card {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    height: 80%;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    height: 100%;
+    width: 100%
+}
+
+.project-info span {
+    color: red;
+}
+
+.visit-btn {
+    display: inline-block;
+    background-color: #333;
+    color: rgb(255, 255, 255);
+    border: none;
+    font-size: 150%;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px;
+    height: 40px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.project-title {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px; /* Adjust width as needed */
+    margin: 0 auto; /* Center the footer contents */
+    padding-bottom: 10px;
+}
+
+.view-all-btn {
+    display: inline-block;
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 40px;
+    text-transform: uppercase;
+}
+
+.view-all-btn:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: #111; /* Matches the background from your screenshot */
+    padding: 20px;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px; /* Adjust width as needed */
+    margin: 0 auto; /* Center the footer contents */
+}
+
+.footer-text {
+    color: #bcbcbc; /* Gray text color */
+    font-size: 14px;
+}
