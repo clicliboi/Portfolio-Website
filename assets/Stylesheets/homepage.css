@@ -49,7 +49,7 @@ nav .logo img {
 }
 
 .intro-content {
-    max-width: 50%;
+    max-width: 100%;
 }
 
 .intro-content h1 {
@@ -166,6 +166,24 @@ nav .logo img {
 
 .view-all-btn:hover {
     background-color: #555;
+}
+
+.popup{
+    width: 250px;
+    height: 80px;
+    background-color: #222831;
+    border: none;
+    color: white;
+    font-size: 150%;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 5px;
+    position: fixed;
+    top: 90%;
+    left: 1%;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 footer {

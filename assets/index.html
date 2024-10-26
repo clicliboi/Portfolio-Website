@@ -4,7 +4,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Stylesheets/homepage.css">
+
+    <script type="module" src="Scripts/popup.js"></script>
+    <script type="module" src="Scripts/tools.js"></script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +23,7 @@
             <ul class="nav-links">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About Me</a></li>
-                <li><a href="Pages/Projects.html">Projects</a></li>
+                <li><a href="Projects.html">Projects</a></li>
             </ul>
         </nav>
     </header>
@@ -29,10 +32,10 @@
         <div class="intro-content">
             <h1>I'M CLEMENT MALAKA, <br> GAME DEVELOPER</h1>
             <div class="social-links">
-                <a href="#"><img src="Images/Global/Gmail Icon.png" alt="Gmail"></a>
-                <a href="#"><img src="Images/Global/Github Icon.png" alt="GitHub"></a>
-                <a href="#"><img src="Images/Global/Linkedin Icon.png" alt="LinkedIn"></a>
-                <a href="#"><img src="Images/Global/Roblox Icon.png" alt="Roblox"></a>
+                <a style="cursor: pointer;" onclick="copyToClipboard('clement.malaka0@gmail.com')"><img src="Images/Global/Gmail Icon.png" alt="Gmail"></a>
+                <a href="https://github.com/clicliboi" target="_blank"><img src="Images/Global/Github Icon.png" alt="GitHub"></a>
+                <a href="https://nl.linkedin.com/in/clement-malaka-65b4592a0" target="_blank"><img src="Images/Global/Linkedin Icon.png" alt="LinkedIn"></a>
+                <a href="https://www.roblox.com/users/205673002/profile" target="_blank"><img src="Images/Global/Roblox Icon.png" alt="Roblox"></a>
             </div>
             <button class="about-btn">ABOUT ME</button>
         </div>
@@ -48,7 +51,7 @@
             <div class="project-card">
                 <img src="Images/Projects/Liberty Tycoon Thumbnail.png" alt="Clicliboi's Tycoon Kit">
                 <div class="project-info">
-                    <p class="project-title">Clicliboi's Tycoon Kit</p>
+                    <h3 class="project-title">Clicliboi's Tycoon Kit</h3>
                     <p><strong>Type:</strong> <span>Solo project</span></p>
                     <p><strong>Visits:</strong> <span>NONE</span></p>
                     <p><strong>Platform:</strong> <span>Roblox Studio</span></p>
@@ -60,7 +63,7 @@
             <div class="project-card">
                 <img src="Images/Projects/Liberty Tycoon Thumbnail.png" alt="Clicliboi's Tycoon Kit">
                 <div class="project-info">
-                    <p class="project-title">Clicliboi's Tycoon Kit</p>
+                    <h3 class="project-title">Clicliboi's Tycoon Kit</h3>
                     <p><strong>Type:</strong> <span>Solo project</span></p>
                     <p><strong>Visits:</strong> <span>NONE</span></p>
                     <p><strong>Platform:</strong> <span>Roblox Studio</span></p>
@@ -71,10 +74,13 @@
         <button class="view-all-btn">VIEW ALL PROJECTS</button>
     </section>
 
+    <a id="popup" class="popup">Top</a>
+
     <footer>
         <div class="footer-container">
             <p class="footer-text">Made by Clement Malaka</p>
         </div>
     </footer>
 </body>
+
 </html>
