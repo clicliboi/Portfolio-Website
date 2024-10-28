@@ -1,0 +1,129 @@
+.project-container {
+    text-align: center;
+}
+
+.container-title {
+    margin: 20px 0px 10px;
+
+    background-color: rgb(40, 40, 40);
+
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+    width: 400px;
+    height: 80px;
+    font-size: 40px;
+
+    color: white;
+}
+
+.container-title img {
+    justify-content: left;
+
+    margin-right: 15px;
+    width: auto;
+    height: 50px;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 20px;
+    transition: all;
+
+    padding: 25px;
+}
+
+.projects {
+    width:100%;
+}
+
+.projects h2 {
+    background: #131313;
+}
+
+.project-title {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 28px;
+    padding-bottom: 10px;
+}
+
+.project-title img {
+    width: auto;
+    height: 50px;
+}
+
+.project-card {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    height: 100%;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+
+    padding: 10px;
+
+    outline: 5px solid #161616;
+    outline-offset: -10px;
+
+    border-radius: 20px;
+}
+
+
+.project-info p {
+    height: 100%;
+    width: 100%;
+    color: white;
+    font-family: 'Montserrat', 'sans-serif';
+}
+
+.project-info span {
+    color: red;
+}
+
+.view {
+    font-family: 'Montserrat', 'sans-serif';
+    align-items: end;
+    display: inline-block;
+    text-align: center;
+    background-color: #333;
+    color: rgb(255, 255, 255);
+    font-size: 150%;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px;
+    height: 35px;
+    padding-top: 3px;
+    width: 100%;
+}
+
+.view:not(:hover) {
+    transform: scale(1);
+    transition: .3s;
+}
+
+.view:hover {
+    background-color: #555;
+    transform: scale(1.02);
+    transition: .5s;
+}

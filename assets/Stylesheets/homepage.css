@@ -1,73 +1,45 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-}
-
-header {
-    background-color: #000;
-    padding: 20px;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav .logo img {
-    width: 50px;
-    height: 50px;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-}
-
-.nav-links li {
-    margin: 0 15px;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-
 .intro {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    padding: 50px;
     background-color: #d3d3d3;
-}
-
-.intro-content {
-    max-width: 100%;
+    width: 100%;
+    height: 750px;
+    padding: 20px;
+    gap: 20px; /* Adds space between items */
 }
 
 .intro-content h1 {
-    font-size: 50px;
+    font-size: 90px;
     font-weight: bold;
     color: #000;
-    padding-bottom: 5px;
+}
+
+.social-links {
+    padding-bottom: 10px;
 }
 
 .social-links a img {
-    width: 50px;
+    width: 60px;
     margin-right: 10px;
     padding-bottom: 10px;
 }
 
-.about-btn {
+.social-links a img:not(:hover) {
+    transform: scale(1);
+    transition: .3s;
+}
+
+.social-links a img:hover {
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+.aboutme {
+    font-family: 'Montserrat', 'sans-serif';
+    display: inline-block;
     padding: 10px 20px;
-    font-size: 18px;
+    font-size: 25px;
     background-color: #333;
     color: red;
     border: none;
@@ -75,83 +47,54 @@ nav .logo img {
     border-radius: 25px;
 }
 
-.profile-pic img {
-    width: 100%;
-    border-radius: 50%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+.aboutme:not(:hover) {
+    transform: scale(1);
+    transition: .3s;
 }
 
-.projects {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
+.aboutme:hover {
+    transform: scale(1.05);
+    transition: .5s;
+}
+
+.profile-pic img {
+    border-radius: 300px;
+}
+
+.container-title {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3e3e3e;
+    border-radius: 10px;
+    font-size: 40px;
+    width: 350px; 
+    height: 70px;
+    margin-bottom: 30px;
     color: white;
 }
 
-.projects h2 {
-    font-size: 300%;
-    margin-bottom: 30px;
-}
-
-.projects-container {
+.container-list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    height: 500px
-}
-
-.project-card {
-    background-color: #222;
-    padding: 20px;
-    border-radius: 10px;
-    width: 400px;
-    height: 80%;
-    text-align: left;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.project-card img {
-    width: 100%;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.project-info p {
-    height: 100%;
-    width: 100%
-}
-
-.project-info span {
-    color: red;
-}
-
-.visit-btn {
-    display: inline-block;
-    background-color: #333;
-    color: rgb(255, 255, 255);
-    border: none;
-    font-size: 150%;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 15px;
-    height: 40px;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.project-title {
-    font-size: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 1000px; /* Adjust width as needed */
-    margin: 0 auto; /* Center the footer contents */
+    transition: all;
     padding-bottom: 10px;
 }
 
-.view-all-btn {
+.projects {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(52, 52, 52);
+    color: white;
+    text-align: center;
+}
+
+.view-all {
+    font-family: 'Montserrat', 'sans-serif';
     display: inline-block;
     background-color: #444;
     color: white;
@@ -160,46 +103,105 @@ nav .logo img {
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
-    margin-top: 40px;
+    margin-top: 30px;
     text-transform: uppercase;
 }
 
-.view-all-btn:hover {
+.view-all:not(:hover) {
+    transform: scale(1);
+    background-color: #444;
+    transition: .3s;
+}
+
+.view-all:hover {
+    transform: scale(1.05);
+    transition: .5s;
     background-color: #555;
 }
 
-.popup{
-    width: 250px;
-    height: 80px;
-    background-color: #222831;
-    border: none;
+.skills {
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(10, 10, 10);
     color: white;
-    font-size: 150%;
-    font-family: 'Montserrat', sans-serif;
-    border-radius: 5px;
-    position: fixed;
-    top: 90%;
-    left: 1%;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 100%;
 }
 
-footer {
-    background-color: #111; /* Matches the background from your screenshot */
+.skill-card {
+    list-style: none;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    font-size: 40%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    margin-bottom: 25px;
+}
+
+.skill-card img {
+    align-items: center;
+    width: auto;
+    height: 225px;
     padding: 20px;
 }
 
-.footer-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 1000px; /* Adjust width as needed */
-    margin: 0 auto; /* Center the footer contents */
+.skill-card h3 {
+    font-size: 500%;
 }
 
-.footer-text {
-    color: #bcbcbc; /* Gray text color */
-    font-size: 14px;
+@media screen and (max-width: 1200px) {
+    .intro {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .intro-content h1 {
+        font-size: 60px; /* Adjust heading size for medium screens */
+    }
+
+    .profile-pic img {
+        width: 250px; /* Reduce image size for medium screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .intro-content h1 {
+        font-size: 40px; /* Further reduce heading size for small screens */
+    }
+
+    .profile-pic img {
+        width: 200px; /* Further reduce image size for small screens */
+    }
+
+    .social-links a img {
+        width: 40px; /* Reduce social icon size for small screens */
+    }
+
+    .aboutme {
+        font-size: 20px; /* Adjust button text size for small screens */
+        padding: 8px 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .intro-content h1 {
+        font-size: 30px; /* Smaller heading size for very small screens */
+    }
+
+    .profile-pic img {
+        width: 150px; /* Smallest image size for very small screens */
+    }
+
+    .social-links a img {
+        width: 30px; /* Smallest social icon size */
+    }
+
+    .aboutme {
+        font-size: 18px;
+        padding: 6px 12px;
+    }
 }

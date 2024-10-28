@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #000;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo img {
+    width: 40px;
+    height: 45px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links li:hover {
+    transform: scale(1.05);
+    transition: .5s;
+}
+
+.nav-links li:not(:hover) {
+    transform: scale(1);
+    transition: .2s;
+}
+
+.popup{
+    width: 250px;
+    height: 80px;
+    background-color: #222831;
+    border: none;
+    color: white;
+    font-size: 150%;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 5px;
+    position: fixed;
+    top: 90%;
+    left: 1%;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    background-color: #111; /* Matches the background from your screenshot */
+    padding: 20px;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px; /* Adjust width as needed */
+    margin: 0 auto; /* Center the footer contents */
+}
+
+.footer-text {
+    color: #bcbcbc; /* Gray text color */
+    font-size: 14px;
+}
