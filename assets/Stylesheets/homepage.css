@@ -66,11 +66,17 @@
     justify-content: center;
     align-items: center;
     background-color: #3e3e3e;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    font-size: clamp(1rem, 3vw + 1rem, 3rem);
+
     border-radius: 10px;
-    font-size: 40px;
     width: 350px; 
     height: 70px;
     margin-bottom: 30px;
+
     color: white;
 }
 

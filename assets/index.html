@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="Stylesheets/projects.css">
     <link rel="stylesheet" href="Stylesheets/homepage.css">
 
-    <script type="module" src="Scripts/popup.js"></script>
     <script type="module" src="Scripts/tools.js"></script>
+    <script type="module" src="Scripts/main.js"></script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +21,7 @@
     <header id="baseheader">
         <nav>
             <div class="logo">
-                <img src="Images/Global/csharp.png" alt="Logo">
+                <img alt="Logo">
             </div>
             <ul class="nav-links">
                 <li><a style="cursor: pointer;">Home</a></li>
@@ -35,7 +35,7 @@
         <div class="intro-content">
             <h1>I'M CLEMENT MALAKA, <br> GAME DEVELOPER</h1>
             <div class="social-links">
-                <a style="cursor: pointer;" onclick="copyToClipboard('clement.malaka0@gmail.com')"><img src="Images/Global/Gmail.png" alt="Gmail"></a>
+                <a style="cursor: pointer;" onclick="copyToClipboard(document.getElementById('popup'), 'clement.malaka0@gmail.com')"><img src="Images/Global/Gmail.png" alt="Gmail"></a>
                 <a href="https://github.com/clicliboi" target="_blank"><img src="Images/Global/Github.png" alt="GitHub"></a>
                 <a href="https://nl.linkedin.com/in/clement-malaka-65b4592a0" target="_blank"><img src="Images/Global/Linkedin.png" alt="LinkedIn"></a>
                 <a href="https://www.roblox.com/users/205673002/profile" target="_blank"><img src="Images/Global/Roblox.png" alt="Roblox"></a>
@@ -106,7 +106,8 @@
         </ul>
     </section>
 
-    <a id="popup" class="popup">Top</a>
+    <a id="popup" class="popup"></a>
+    <a id="tooltip"><a>
 
     <footer>
         <div class="footer-container">

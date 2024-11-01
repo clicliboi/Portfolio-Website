@@ -20,14 +20,26 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 25px;
 }
 
-nav .logo img {
-    width: 40px;
-    height: 45px;
+.logo img {
+    content: url('../Images/Global/Gmail.png');
+    
+    display: flex; /* Ensures it behaves like an image */
+
+    justify-content: center;
+    align-content: center;
+
+    width: auto; /* Set desired width */
+    height: 50px; /* This will maintain aspect ratio */
 }
 
 .nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     list-style: none;
     display: flex;
 }
@@ -52,7 +64,8 @@ nav .logo img {
     transition: .2s;
 }
 
-.popup{
+#popup {
+    visibility: hidden;
     width: 250px;
     height: 80px;
     background-color: #222831;
@@ -64,6 +77,15 @@ nav .logo img {
     position: fixed;
     top: 90%;
     left: 1%;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#tooltip {
+    visibility: hidden;
+    position: fixed;
     text-decoration: none;
     display: flex;
     justify-content: center;
