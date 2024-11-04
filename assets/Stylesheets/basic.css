@@ -24,7 +24,7 @@ nav {
 }
 
 .logo img {
-    content: url('../Images/Global/Gmail.png');
+    content: url('../Images/Global/Website Logo.png');
     
     display: flex; /* Ensures it behaves like an image */
 

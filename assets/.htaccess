@@ -1,8 +1,54 @@
+<IfModule mod_rewrite.c>
 RewriteEngine On
+RewriteBase /
 
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
-RewriteRule ^(.*)$ $1.html [NC,L]
+RewriteRule ^(.+)$ $1.html [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /index.html [L,R=302]
+
+ErrorDocument 404 /404.html
+
+<IfModule mod_headers.c>
+    # HSTS - Enforces HTTPS for 1 year and includes subdomains
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+    # Content Security Policy (CSP)
+    Header set Content-Security-Policy "default-src 'self'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'"
+
+    # X-Frame-Options - Prevents embedding of your site in iframes (clickjacking protection)
+    Header always set X-Frame-Options "SAMEORIGIN"
+
+    # X-Content-Type-Options - Prevents MIME type sniffing for security
+    Header set X-Content-Type-Options "nosniff"
+
+    # Referrer-Policy - Controls referrer information sent when navigating away from your site
+    Header set Referrer-Policy "no-referrer-when-downgrade"
+
+    # Permissions-Policy - Restricts use of certain browser features
+    Header set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=()"
+</IfModule>
+
+# Protect config.html - Denies access to sensitive configuration files
+<Files config.html>
+    <IfModule !mod_authz_core.c>
+        order allow,deny
+        deny from all
+    </IfModule>
+    <IfModule mod_authz_core.c>
+        require all denied
+    </IfModule>
+</Files>
+
+# Main Rewrite Rules for HTML-Based Site
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+    RewriteBase /
+</IfModule>
