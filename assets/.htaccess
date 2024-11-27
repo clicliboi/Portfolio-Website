@@ -11,9 +11,9 @@ RewriteRule ^(.+)$ $1.html [L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ /index.html [L,R=302]
+RewriteRule ^(.*)$ / [L,R=302]
 
-ErrorDocument 404 /404.html
+ErrorDocument 404 /404
 
 <IfModule mod_headers.c>
     # HSTS - Enforces HTTPS for 1 year and includes subdomains

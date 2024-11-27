@@ -94,6 +94,14 @@
     border-radius: 20px;
 }
 
+.project-card ul img {
+    outline: none;
+
+    margin-top: 5px;
+
+    height: 80px;
+    width: auto;
+}
 
 .project-info p {
     height: 100%;
@@ -116,9 +124,8 @@
     font-size: 150%;
     cursor: pointer;
     border-radius: 5px;
-    margin-top: 15px;
+    margin-top: 5px;
     height: 35px;
-    padding-top: 3px;
     width: 100%;
 }
 
